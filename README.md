@@ -48,7 +48,8 @@ ScrollTrigger
 Demo
 
 Live Demo
-
+[
+](https://dnstroupe.github.io/nasa-space-explorer/)
 License
 
 This project is licensed under the MIT License.
