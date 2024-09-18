@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NASA Space Explorer</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <!-- GSAP and ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+  </head>
+  <body class="bg-black text-white">
+    <!-- Preloader Animation -->
+    <div id="preloader">
+      <div class="loader">🚀</div>
+      <p>Launching NASA Space Explorer...</p>
+    </div>
+
+    <!-- Dark Mode Toggle -->
+    <div class="dark-mode-toggle">
+      <input
+        type="checkbox"
+        id="mode"
+        class="toggle-checkbox"
+        onclick="toggleDarkMode()"
+      />
+      <label for="mode" class="toggle-label"></label>
+    </div>
+
+    <!-- Parallax Starry Background -->
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>
+
+    <!-- Updated Astronaut and Dog Image -->
+    <img
+      src="images/business-3d-astronaut-and-dog-in-space-suit-floating.png"
+      id="floating-astronaut"
+      alt="Astronaut and Dog"
+    />
+
+    <div class="container mx-auto px-4 py-12 relative z-10">
+      <h1 class="text-6xl font-bold text-center mb-8">NASA Space Explorer</h1>
+      <div class="flex justify-center mb-8">
+        <input type="date" id="date" class="p-4 rounded-lg text-gray-900" />
+        <button
+          onclick="fetchSpaceData()"
+          class="ml-4 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg pulsate"
+        >
+          Get Space Data
+        </button>
+      </div>
+      <div id="space-content" class="mt-12 text-center">
+        <!-- Space content (images/videos) will dynamically appear here -->
+      </div>
+      <div class="mt-12 text-center">
+        <button
+          onclick="generateRandomFact()"
+          class="px-6 py-3 bg-green-600 hover:bg-green-700 text-white rounded-lg pulsate"
+        >
+          Get Random Space Fact
+        </button>
+        <div id="space-fact" class="mt-6 text-xl"></div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
